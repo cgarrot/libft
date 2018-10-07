@@ -6,14 +6,14 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 05:08:18 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 08:11:18 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 08:40:05 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	unsigned int len;
 	unsigned int i;

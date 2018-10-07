@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_memalloc.c                                    .::    .:/ .      .::   */
+/*   ft_strequ.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/06 07:40:47 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 08:04:17 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/07 08:08:45 by cgarrot      #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/07 08:33:05 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+int		ft_strequ(char const *s1, char const *s2)
 {
-	char *str;
+	int i;
+	int j;
 
-	if (!(str = malloc(sizeof(size_t) * size + 1)))
-		return (0);
-	return (str);
+	i = 0;
+	j = 0;
+	while (s1[i] && s2[i])
+	{
+		if (((ft_isalpha(s1[i]) || s1[i] == ' ')
+					&& (ft_isalpha(s2[i]) || s2[i] == ' ')))
+			j++;
+		i++;
+	}
+	if (i == j)
+		return (1);
+	return (0);
 }

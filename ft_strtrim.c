@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_memalloc.c                                    .::    .:/ .      .::   */
+/*   ft_strtrim.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/06 07:40:47 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 08:04:17 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/07 09:01:10 by cgarrot      #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/07 09:25:55 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_strtrim(char const *s)
 {
-	char *str;
+	char			*d;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	tmp;
 
-	if (!(str = malloc(sizeof(size_t) * size + 1)))
+	i = 0;
+	j = 0;
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		i++;
+	j = ft_strlen(s);
+	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
+		j--;
+	if (!(d = (char*)malloc(sizeof(char) * j - i)))
 		return (0);
-	return (str);
+	tmp = j;
+	j = 0;
+	while (i < tmp)
+	{
+		d[j] = s[i];
+		i++;
+		j++;
+	}
+	d[j] = '\0';
+	return (d);
 }
