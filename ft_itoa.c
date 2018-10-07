@@ -6,14 +6,14 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 06:27:31 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 10:20:29 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 11:43:39 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		len(int n)
+static int		len(int n)
 {
 	int len;
 
@@ -23,14 +23,14 @@ int		len(int n)
 	return (len);
 }
 
-int		neg(int n)
+static int		neg(int n)
 {
 	if (n < 0)
 		n = -n;
 	return (n);
 }
 
-int		one(int n)
+static int		one(int n)
 {
 	if (n < 0)
 		return (1);
