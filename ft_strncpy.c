@@ -6,23 +6,27 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 07:57:33 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 08:00:36 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 05:32:58 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+char *ft_strncpy(char *dst, const char *src, size_t n)
 {
-	unsigned int i;
+	char *d;
 
-	i = 0;
-	while (i < n)
+	d = dst;
+	while (n > 0 && *src != '\0')
 	{
-		dst[i] = src[i];
-		i++;
+		*d++ = *src++;
+		--n;
 	}
-	dst[i] = '\0';
+	while (n > 0)
+	{
+		*d++ = '\0';
+		--n;
+	}
 	return (dst);
 }

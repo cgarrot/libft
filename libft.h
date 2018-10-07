@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 11:15:53 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 10:18:52 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 02:16:26 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -57,6 +57,6 @@ void		*ft_memccpy(void *restrict dst,
 		const void *restrict src, int c, size_t n);
 void		*ft_memmove(void *dst, const void *src, size_t len);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
-void		ft_memchr(const void *s, int c, size_t n);
+void		*ft_memchr(const void *s, int c, size_t n);
 
 #endif

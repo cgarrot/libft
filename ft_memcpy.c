@@ -6,17 +6,17 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 08:58:17 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 09:21:09 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 04:21:23 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char *restrict			d;
-	const char *restrict	s;
+	char		*d;
+	const char	*s;
 
 	d = dst;
 	s = src;

@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 09:42:39 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 09:53:36 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 03:44:47 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,10 +20,17 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = dst;
 	s = src;
-	while (len > 0)
+	if (src >= dst)
+		ft_memcpy(d, s, len);
+	else
 	{
-		*d++ = *s++;
-		len--;
+		s += len;
+		d += len;
+		while (len > 0)
+		{
+			*--d = *--s;
+			len--;
+		}
 	}
 	return (dst);
 }
