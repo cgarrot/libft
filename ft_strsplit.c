@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 06:43:40 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 07:20:42 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 11:37:33 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -27,11 +27,11 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-		if ((ft_isascii(s[i]) && s[i] != c) && (s[i + 1] == c))
+		if ((s[i] != c) && (s[i + 1] == c))
 			k++;
 		i++;
 	}
-	if (!(tab = malloc(sizeof(char) * k)))
+	if (!(tab = malloc(sizeof(char*) * k)))
 		return (0);
 	i = 0;
 	k = 0;
@@ -44,21 +44,20 @@ char	**ft_strsplit(char const *s, char c)
 			l++;
 			i++;
 		}
-		while (((((ft_isascii(s[i]) && s[i]) != c) && s[i + 1] == c) != '\0') && i != 0)
+		while ((((s[i] != c) && s[i + 1] == c) != '\0') && i != 0)
 		{
 			tab[k][j] = s[l];
 			l++;
 			j++;
 		}
-		j = 0;
-		while (((ft_isascii(s[i]) && s[i + 1]) != c) != '\0')
+		j = 1;
+		while (((s[i + 1]) != c) != '\0')
 		{
 			j++;
 			i++;
 		}
 		if (!(tab[k] = (char*)malloc(sizeof(char) * j)))
 			return (0);
-		tab[k][j] = '\0';
 		k++;
 	}
 	return (tab);

@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 09:01:10 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 09:25:55 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 10:59:51 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,28 +15,29 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char			*d;
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	tmp;
+	char	*d;
+	int		i;
+	int		j;
+	int		tmp;
 
 	i = 0;
 	j = 0;
 	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	j = ft_strlen(s);
+	if (*s != 0)
+		j = ft_strlen(s) - 1;
 	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
 		j--;
-	if (!(d = (char*)malloc(sizeof(char) * j - i)))
+	j++;
+	if (!(d = (char*)malloc(sizeof(char) * j - i + 1)))
 		return (0);
-	tmp = j;
-	j = 0;
-	while (i < tmp)
+	tmp = 0;
+	while (i < j)
 	{
-		d[j] = s[i];
+		d[tmp] = s[i];
 		i++;
-		j++;
+		tmp++;
 	}
-	d[j] = '\0';
+	d[tmp] = '\0';
 	return (d);
 }
