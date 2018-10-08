@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 06:06:24 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 06:10:19 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/08 23:31:34 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,9 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	if (s != 0)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 08:48:04 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 09:00:49 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/08 23:30:09 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
+	if (s1 == 0 || s2 == 0)
+		return (NULL);
 	if (!(tab = (char*)malloc(sizeof(char)
 					* (ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (0);

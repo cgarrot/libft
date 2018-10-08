@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 08:17:41 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 08:34:53 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/08 23:29:07 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,8 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 
 	i = 0;
 	j = 0;
+	if (s1 == 0 || s2 == 0)
+		return (0);
 	while ((s1[i] && s2[i]) && i < n)
 	{
 		if (((ft_isalpha(s1[i]) || s1[i] == ' ')

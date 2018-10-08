@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 06:17:04 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 06:18:35 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/08 23:32:40 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,9 +18,10 @@ void	ft_putstr(char const *s)
 	int i;
 
 	i = 0;
-	while (s[i])
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
+	if (s != 0)
+		while (s[i])
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
 }

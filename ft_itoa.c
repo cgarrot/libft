@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 06:27:31 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 11:43:39 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 00:52:34 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,7 +37,7 @@ static int		one(int n)
 	return (0);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		i;
 	int		tmp2;
