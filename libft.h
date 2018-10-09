@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/07 08:46:05 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 09:21:36 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 02:03:17 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -68,5 +68,7 @@ int			ft_strnequ(char const *s1, char const *s2, size_t n);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
+char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif

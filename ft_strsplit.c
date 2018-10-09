@@ -6,7 +6,7 @@
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 06:43:40 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 01:21:55 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 01:57:36 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -30,7 +30,7 @@ static unsigned int	count_word(const char *s, char c)
 	return (i);
 }
 
-static char*	strndup(const char *s, size_t n)
+static char			*strndup(const char *s, size_t n)
 {
 	char	*str;
 
@@ -42,7 +42,7 @@ static char*	strndup(const char *s, size_t n)
 	return (str);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char				**ft_strsplit(char const *s, char c)
 {
 	unsigned int	n;
 	unsigned int	i;
