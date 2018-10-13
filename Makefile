@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/10 19:59:22 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2018/10/10 20:03:13 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/10/13 16:23:31 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -72,6 +72,11 @@ FILES = ft_atoi\
 		ft_strtrim\
 		ft_tolower\
 		ft_toupper\
+		ft_lstnew\
+		ft_lstdelone\
+		ft_lstdel\
+		ft_lstadd\
+		ft_lstiter\
 
 #----------------------------------SOURCE--------------------------------------#
 
