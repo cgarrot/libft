@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   ft_lstmap.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/06 07:48:10 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/14 18:35:17 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/14 17:51:44 by cgarrot      #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/14 17:53:41 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char *dup;
+	t_list	*result;
+	t_list	*head;
+	t_list	*elem;
 
-	if (!(dup = (char*)malloc(sizeof(char) * ft_strlen(s1) + 1)))
-		return (0);
-	else
-		dup = ft_strcpy(dup, s1);
-	return (dup);
+	if (!lst || !f)
+		return (NULL);
+	elem = f(lst);
+	if (!(result = ft_lstnew(elem->content, elem->content_size)))
+		return (NULL);
+	lst = lst->next;
+	head = result;
+	while (lst)
+	{
+		elem = f(lst);
+		if (!(result->next = ft_lstnew(elem->content, elem->content_size)))
+			return (NULL);
+		result = result->next;
+		lst = lst->next;
+	}
+	return (head);
 }

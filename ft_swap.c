@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   ft_swap.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/06 07:48:10 by cgarrot      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/14 18:35:17 by cgarrot     ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/14 18:27:21 by cgarrot      #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/14 18:38:01 by cgarrot     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_swap(int *a, int *b)
 {
-	char *dup;
+	int c;
 
-	if (!(dup = (char*)malloc(sizeof(char) * ft_strlen(s1) + 1)))
-		return (0);
-	else
-		dup = ft_strcpy(dup, s1);
-	return (dup);
+	c = *a;
+	*a = *b;
+	*b = c;
 }
